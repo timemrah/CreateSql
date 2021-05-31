@@ -3,13 +3,13 @@ If you are pulling data from the database by writing sql code, it's a nice tool 
 
 ## Example
 
-	$sql    = new CreateSql();
+	$sql = new CreateSql();
         
-    $sql->createLimit	 (1, 20);
-    $sql->createWhereLike('b.TITLE',       "%searchString%");
-    $sql->createWhere    ('b.LAST_CONTROL', 'success');
-    $sql->createWhere    ('b.ACTIVE',       'true');
-    $sql->createWhere    ('b.TAX_PLATE',    'true');
+    $sql->createLimit(1, 20);
+    $sql->createWhereLike('b.TITLE', "%searchString%");
+    $sql->createWhere('b.LAST_CONTROL', 'success');
+    $sql->createWhere('b.ACTIVE', 'true');
+    $sql->createWhere('b.TAX_PLATE', 'true');
 
     $query = "SELECT * FROM businesses as b {$sql->where}";
 
